@@ -1,7 +1,10 @@
 ext {
     def koinDiVersion = "3.1.5"
+
     def retrofitVersion = "2.9.0"
     def okHttpVersion = "4.8.0"
+
+    def kotlinxCoroutinesVersion = "1.6.0"
 
     diDependencies = [
             koinCore   : "io.insert-koin:koin-core:" + koinDiVersion,
@@ -13,5 +16,10 @@ ext {
             retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:" + retrofitVersion,
             okHttp                  : "com.squareup.okhttp3:okhttp:" + okHttpVersion,
             okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:" + okHttpVersion
+    ]
+
+    coroutinesDependencies = [
+            kotlinxCoroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + kotlinxCoroutinesVersion,
+            kotlinxCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + kotlinxCoroutinesVersion
     ]
 }
