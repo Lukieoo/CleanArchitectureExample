@@ -1,7 +1,7 @@
-package com.pawkrzysciak.cleanarchitectureexample
+package com.pawkrzysciak.cleanarchitectureexample.core.app
 
 import android.app.Application
-import com.pawkrzysciak.cleanarchitectureexample.di.koinInjector
+import com.pawkrzysciak.cleanarchitectureexample.core.di.koinInjector
 import org.koin.android.ext.koin.androidContext
 
 class App : Application() {

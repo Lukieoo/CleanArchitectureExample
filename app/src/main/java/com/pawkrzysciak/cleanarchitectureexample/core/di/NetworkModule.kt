@@ -1,6 +1,6 @@
-package com.pawkrzysciak.cleanarchitectureexample.di
+package com.pawkrzysciak.cleanarchitectureexample.core.di
 
-import com.pawkrzysciak.cleanarchitectureexample.api.GamesFromApi
+import com.pawkrzysciak.cleanarchitectureexample.core.api.GamesFromApi
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
