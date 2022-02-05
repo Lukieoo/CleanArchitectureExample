@@ -45,4 +45,7 @@ dependencies {
 
     //di dependencies
     implementation diDependencies.values()
+
+    //network dependencies
+    implementation networkDependencies.values()
 }
