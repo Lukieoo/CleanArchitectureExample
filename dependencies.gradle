@@ -1,0 +1,8 @@
+ ext{
+    def koinDiVersion = "3.1.5"
+
+     diDependencies = [
+             koinCore: "io.insert-koin:koin-core:" + koinDiVersion,
+             koinAndroid: "io.insert-koin:koin-android:" + koinDiVersion
+     ]
+ }
