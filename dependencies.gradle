@@ -6,6 +6,11 @@ ext {
 
     def kotlinxCoroutinesVersion = "1.6.0"
 
+
+    def navigationFragmentKtxVersion = "2.3.3"
+    def lifecycleVersion = "2.2.0"
+    def lifeEventVersion = "1.2.0"
+
     diDependencies = [
             koinCore   : "io.insert-koin:koin-core:" + koinDiVersion,
             koinAndroid: "io.insert-koin:koin-android:" + koinDiVersion
@@ -21,5 +26,18 @@ ext {
     coroutinesDependencies = [
             kotlinxCoroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + kotlinxCoroutinesVersion,
             kotlinxCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + kotlinxCoroutinesVersion
+    ]
+
+    navigationDependencies = [
+            navigationFragmentKtx: "androidx.navigation:navigation-fragment-ktx:" + navigationFragmentKtxVersion,
+            navigationUiKtx      : "androidx.navigation:navigation-ui-ktx:" + navigationFragmentKtxVersion
+    ]
+
+    lifecycleDependencies = [
+            lifecycleViewmodelKtx: "androidx.lifecycle:lifecycle-viewmodel-ktx:" + lifecycleVersion,
+            lifecycleLivedataKtx : "androidx.lifecycle:lifecycle-livedata-ktx:" + lifecycleVersion,
+            lifecycleRuntimeKtx  : "androidx.lifecycle:lifecycle-runtime-ktx:" + lifecycleVersion,
+            lifecycleCommon      : "androidx.lifecycle:lifecycle-common-java8:" + lifecycleVersion,
+            liveEvent            : "com.github.hadilq.liveevent:liveevent:" + lifeEventVersion
     ]
 }
