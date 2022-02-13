@@ -32,6 +32,7 @@ val appModule = module {
 	factory<NetworkStateProvider> { NetworkStateProviderImpl(get()) }
 	factory<ErrorWrapper> { ErrorWrapperImpl() }
 	factory<ErrorMapper> { ErrorMapperImpl(androidContext()) }
+	single(createdAtStart = true) { ActivityProvider(androidApplication()) }
 
 	factory<FragmentNavigator> {
 		FragmentNavigatorImpl(
@@ -44,5 +45,4 @@ val appModule = module {
 	factory {
 		navOptions {}
 	}
-	single(createdAtStart = true) { ActivityProvider(androidApplication()) }
 }

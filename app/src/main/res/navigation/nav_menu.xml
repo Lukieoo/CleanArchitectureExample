@@ -9,5 +9,14 @@
         android:name="com.pawkrzysciak.cleanarchitectureexample.features.presentation.MainGamesFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_main_games">
+        <action
+            android:id="@+id/action_navigate_from_character_screen_to_character_details_screen"
+            app:destination="@id/details_fragment"
+            app:popUpTo="@id/main" />
     </fragment>
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="com.pawkrzysciak.cleanarchitectureexample.features.presentation.details.presentation.GameDetailsFragment"
+        android:label="@string/details_fragment"
+        tools:layout="@layout/fragment_game_details" />
 </navigation>

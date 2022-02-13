@@ -38,4 +38,7 @@ class MainGamesViewModel(
 		}
 	}
 
+	fun onGameClick(gameInfo: GameInfoDisplayable) {
+		gameInfoNavigator.openGameDetailsScreen(gameInfo)
+	}
 }

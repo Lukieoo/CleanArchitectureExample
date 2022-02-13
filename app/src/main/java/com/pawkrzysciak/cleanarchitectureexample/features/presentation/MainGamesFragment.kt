@@ -35,6 +35,7 @@ class MainGamesFragment : BaseFragment<MainGamesViewModel, FragmentMainGamesBind
 			setHasFixedSize(true)
 			adapter = gameAdapter
 		}
+		gameAdapter.setOnGameClickListener { viewModel.onGameClick(it) }
 	}
 
 	override fun initObservers() {
