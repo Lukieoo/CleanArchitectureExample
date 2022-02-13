@@ -15,16 +15,16 @@ import org.koin.dsl.module
 val gameModule = module {
 
 	// data
-	factory<GamesRepository> { GameRepositoryImpl(get()) }
+	factory<GamesRepository> { GameRepositoryImpl(get(),get(),get()) }
 
 	// domain
 	factory { GetGamesUseCase(get()) }
 
 	// navigation
-	//factory<GameInfoNavigator> { GameInfoNavigatorImpl(get()) }
+	factory<GameInfoNavigator> { GameInfoNavigatorImpl(get()) }
 
 	// presentation
-	viewModel { MainGamesViewModel(get()) }
+	viewModel { MainGamesViewModel(get(),get(),get()) }
 	factory { MainGamesFragment() }
 	factory { GameAdapter() }
 }

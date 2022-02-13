@@ -7,9 +7,7 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.observe
-import com.example.akademiaandroida.core.base.BaseViewModel
+import androidx.fragment.app.Fragment 
 
 abstract class BaseFragment<T : BaseViewModel, S : ViewDataBinding>(
 	private val viewModelId: Int,

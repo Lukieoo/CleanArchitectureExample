@@ -1,13 +1,13 @@
-package com.example.akademiaandroida.core.base
+package com.pawkrzysciak.cleanarchitectureexample.core.base
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.hadilq.liveevent.LiveEvent
-import com.pawkrzysciak.cleanarchitectureexample.core.base.UiState
+import com.pawkrzysciak.cleanarchitectureexample.core.exeption.ErrorMapper
 
-open class BaseViewModel() : ViewModel(),
+open class BaseViewModel(private val errorMapper: ErrorMapper? = null) : ViewModel(),
 	DefaultLifecycleObserver {
 
 	private val _message by lazy { LiveEvent<String>() }
@@ -29,6 +29,8 @@ open class BaseViewModel() : ViewModel(),
 	}
 
 	protected fun handleFailure(throwable: Throwable) {
-		showMessage("Error")
+		errorMapper
+			?.map(throwable)
+			?.let { showMessage(it) }
 	}
 }
