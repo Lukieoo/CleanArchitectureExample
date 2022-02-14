@@ -16,11 +16,12 @@ x -right now is avalibe in project
 - [x] [MVVM](https://developer.android.com/jetpack/guide?gclid=Cj0KCQiAgP6PBhDmARIsAPWMq6mFo28yBKXojsFY41Jx7evAThwdWurC7fCcwiTPHJcKQjjcYjxwsuAaArOREALw_wcB&gclsrc=aw.ds)
 - [x] [Data Binding](https://vuejs.org/)
 - [x] [Clean Architecture](https://medium.com/swlh/clean-architecture-in-android-a-beginner-approach-be0ce00d806b)
-- [ ] [Room](https://developer.android.com/training/data-storage/room)
+- [x] [Room](https://developer.android.com/training/data-storage/room)
 - [x] [RestApi](https://api.rawg.io/docs/)
+- [x] [Error handler]()
 - [x] [Retrofit 2](https://github.com/square/retrofit)
 - [x] [Coroutines](https://developer.android.com/kotlin/coroutines?gclid=Cj0KCQiAgP6PBhDmARIsAPWMq6l9Buo9u1HVzL6065eZAyBqmvbqjwRMnInjvdYQO8T10ijYY84LYVMaAlDrEALw_wcB&gclsrc=aw.ds)
-- [ ] [Navigator jetpack](https://developer.android.com/guide/navigation?gclid=Cj0KCQiAgP6PBhDmARIsAPWMq6mEMemyJ5Hmfj8o1r9J70zS2sy3Bzl-yDtdZgcgUZGOzdb8TkpXeDQaAg9YEALw_wcB&gclsrc=aw.ds)
+- [x] [Navigator jetpack](https://developer.android.com/guide/navigation?gclid=Cj0KCQiAgP6PBhDmARIsAPWMq6mEMemyJ5Hmfj8o1r9J70zS2sy3Bzl-yDtdZgcgUZGOzdb8TkpXeDQaAg9YEALw_wcB&gclsrc=aw.ds)
 - [ ] [Unit Test]("https://developer.android.com/training/testing/fundamentals") 
 
    
