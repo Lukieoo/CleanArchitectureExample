@@ -18,7 +18,7 @@ import org.koin.dsl.module
 val gameModule = module {
 
 	// data
-	factory<GamesRepository> { GameRepositoryImpl(get(), get(), get()) }
+	factory<GamesRepository> { GameRepositoryImpl(get(), get(), get(), get()) }
 
 	// domain
 	factory { GetGamesUseCase(get()) }

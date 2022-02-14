@@ -6,12 +6,14 @@ import com.pawkrzysciak.cleanarchitectureexample.features.domain.model.GameInfo
 data class GameInfoRemote(
 	@SerializedName("background_image") val background_image: String,
 	@SerializedName("name") val name: String,
+	@SerializedName("id") val id: Int,
 ) {
 	companion object
 
 	fun toGameInfo() =
 		GameInfo(
 			background_image = background_image,
-			name = name
+			name = name,
+			id = id
 		)
 }

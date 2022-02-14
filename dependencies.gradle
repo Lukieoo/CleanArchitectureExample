@@ -6,10 +6,12 @@ ext {
 
     def kotlinxCoroutinesVersion = "1.6.0"
 
-
     def navigationFragmentKtxVersion = "2.3.3"
     def lifecycleVersion = "2.2.0"
     def lifeEventVersion = "1.2.0"
+
+    def roomVersion = "2.2.5"
+    def roomKaptVersion = "2.2.5"
 
     diDependencies = [
             koinCore   : "io.insert-koin:koin-core:" + koinDiVersion,
@@ -26,6 +28,15 @@ ext {
     coroutinesDependencies = [
             kotlinxCoroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:" + kotlinxCoroutinesVersion,
             kotlinxCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:" + kotlinxCoroutinesVersion
+    ]
+
+    databaseDependencies = [
+            roomRuntime: "androidx.room:room-runtime:" + roomVersion,
+            roomKtx: "androidx.room:room-ktx:" + roomVersion,
+    ]
+
+    kaptDependencies = [
+            room: "androidx.room:room-compiler:" + roomKaptVersion
     ]
 
     navigationDependencies = [

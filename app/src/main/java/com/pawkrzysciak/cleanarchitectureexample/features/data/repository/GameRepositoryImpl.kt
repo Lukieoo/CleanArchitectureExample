@@ -5,10 +5,13 @@ import com.pawkrzysciak.cleanarchitectureexample.core.exeption.ErrorWrapper
 import com.pawkrzysciak.cleanarchitectureexample.core.exeption.callOrThrow
 import com.pawkrzysciak.cleanarchitectureexample.core.network.NetworkStateProvider
 import com.pawkrzysciak.cleanarchitectureexample.features.GamesRepository
+import com.pawkrzysciak.cleanarchitectureexample.features.data.local.GameInfoDao
+import com.pawkrzysciak.cleanarchitectureexample.features.data.local.model.GameInfoCached
 import com.pawkrzysciak.cleanarchitectureexample.features.domain.model.GameInfo
 
 class GameRepositoryImpl(
 	private val api: GamesFromApi,
+	private val gameInfoDao: GameInfoDao,
 	private val networkStateProvider: NetworkStateProvider,
 	private val errorWrapper: ErrorWrapper
 ) : GamesRepository {
@@ -18,11 +21,10 @@ class GameRepositoryImpl(
 				getGameInfoFromRemote()
 			}
 				.also {
-					//saveCharactersToLocal(it)
+					saveGamesToLocal(it)
 				}
 		} else {
-			arrayListOf()
-			//getCharactersFromLocal()
+			getCharactersFromLocal()
 		}
 	}
 
@@ -31,18 +33,18 @@ class GameRepositoryImpl(
 			.results
 			.map { it.toGameInfo() }
 			.also {
-				//saveCharactersToLocal(it)
+				saveGamesToLocal(it)
 			}
 	}
 
-/*
-	private suspend fun saveCharactersToLocal(characters: List<GameInfo>) {
-		characters.map { CharacterCached(it) }
+	private suspend fun saveGamesToLocal(games: List<GameInfo>) {
+		games.map { GameInfoCached(it) }
 			.toTypedArray()
-			.let { charactersDao.saveCharacters(*it) }
+			.let { gameInfoDao.saveGames(*it) }
 	}
+
 	private suspend fun getCharactersFromLocal(): List<GameInfo> {
-		return charactersDao.getCharacters()
-			.map { it.toCharacter() }
-	}*/
+		return gameInfoDao.getGames()
+			.map { it.toGameInfo() }
+	}
 }

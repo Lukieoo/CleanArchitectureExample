@@ -8,11 +8,13 @@ import android.os.Parcelable
 data class GameInfoDisplayable(
 	val background_image: String,
 	val name: String,
+	val id: Int,
 ) : Parcelable {
 	constructor(
 		gameInfo: GameInfo
 	) : this(
 		background_image = gameInfo.background_image,
-		name = gameInfo.name
+		name = gameInfo.name,
+		id = gameInfo.id
 	)
 }
